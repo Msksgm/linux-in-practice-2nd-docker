@@ -25,7 +25,8 @@ RUN apt-get update && apt-get install -y \
     libvirt-daemon-system
 
 ## 書籍で記載されていないが、動作確認に利用するコマンド
-RUN apt-get install -y strace
+RUN apt-get install -y strace \
+    psmisc
 
 ## 書籍で記載されている必要なユーザ設定
 RUN adduser `id -un` libvirt
